@@ -108,7 +108,6 @@ h1 {
     font-weight: 800;
     font-size: 56px;
     color: rgba(0, 0, 26, 1);
-    ;
 }
 
 
@@ -267,8 +266,104 @@ h1 {
 /* Movil */
 
 @media only screen and (max-width: 767px) {
+    .menu-toggle-checkbox {
+        display: none;
+    }
+    .menu-toggle-label {
+        cursor: pointer;
+        font-size: 60px;
+        display: inline-block;
+    }
+    .list>ul {
+        list-style: none;
+        padding: 0;
+    }
+    .list {
+        display: none;
+        margin-top: 8px;
+    }
+    .list>ul>li.active {
+        margin:5px 0;
+    }
+    .menu-toggle-checkbox:checked + .menu-toggle-label + .menu {
+        display: block;
+    }
     .main {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5,1fr);
+        grid-template-rows: 1.5fr 1fr;
+    }
+
+    .bright {
+        max-width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.5fr 0.8fr 1fr;
+        row-gap: 10px;
+    }
+    .imgintwo {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .img1{
+        height: 320px;
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: 0% 0%;
+    }
+
+    h1 {
+        min-width: 100%;
+        min-height: 100px;
+        grid-row:2;
+    }
+    .p {
+        min-width: 100%;
+        grid-row:3;
+    }
+    .column {
+        max-width: 100%;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .sect2 {
+        margin: 0 auto;
+        padding: 15px 15px;
+        max-width: 100%;
+        min-height: 200px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .sect2>.photo1 {
+        grid-template-columns: 1fr 2fr;
+    }
+    .divimg2 {
+        text-align: center;
+    }
+    .sect2>.photo2 {
+        grid-template-columns: 1fr 2fr;
+    }
+    .divimg3 {
+        text-align: center;
+    }
+    .sect2>.photo3 {
+        grid-template-columns: 1fr 2fr;
+    }
+    .divimg4 {
+        text-align: center;
+    }
+}   
+
+/* LAPTOP/TABLET */
+
+
+@media only screen and (min-width: 767px) {
+    .menu-icon {
+        display: none;
+    }
+    .menu-toggle-checkbox {
+        display: none;
     }
 }
